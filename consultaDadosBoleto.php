@@ -34,6 +34,4 @@ curl_close($curl);
 
 print_r ($response);
 
-
-
-
+// $bancoTitulo = $response->consultaFatorDataVencimentoResponse->bancoTitulo;

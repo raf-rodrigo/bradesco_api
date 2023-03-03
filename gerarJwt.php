@@ -60,7 +60,11 @@ fX/urx1eLo7aceFcPJ/6UP8=
 -----END CERTIFICATE-----
 EOD;
 
-$theDateTime = new DateTime('now', new DateTimeZone('America/Sao_Paulo'));
+date_default_timezone_set('America/Sao_Paulo');
+
+// $theDateTime = new DateTime('now', new DateTimeZone('America/Sao_Paulo'));
+$theDateTime = new DateTime('now');
+
 
 $xBradTimestamp = $theDateTime->format('Y-m-d\TH:i:s\-00:00');
 
@@ -90,3 +94,4 @@ $jwt = JWT::encode($payload, $privateKey, 'RS256');
 $decoded = JWT::decode($jwt, new Key($publicKey, 'RS256'));
 
 // echo $jwt;
+// echo $horario;

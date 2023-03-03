@@ -2,10 +2,11 @@
 
 require 'gerarJwt.php';
 require 'gerarAccessToken.php';
+require 'configuracao.php';
 
-$agencia = 3963;
-$tipoEntrada = 1;
-$dadosEntrada = "00192923900000010000000001732554881424617717";
+$agencia = AGENCIA;
+$tipoEntrada = TIPOENTRADA;
+$dadosEntrada = DADOSENTRADA;
 $inJson = array(
   "agencia"=>$agencia,
   "tipoEntrada"=>$tipoEntrada,
